@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Солнце, дуб и выдержка: как Дагестан создал главный коньячный бренд России</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e0cfbc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .article-banner {
+            max-width: 980px;
+            width: 100%;
+            background: #fffaf3;
+            border-radius: 48px;
+            box-shadow: 0 30px 50px -20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+            overflow: hidden;
+            border: 1px solid #e8d5bc;
+        }
+
+        .article-inner {
+            padding: 48px 52px;
+        }
+
+        .brand-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 2px solid #eedfc8;
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+        }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .brand-icon {
+            font-size: 2.4rem;
+            filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.1));
+        }
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #2b291c;
+        }
+        .brand-name span {
+            color: #b47a41;
+        }
+        .expert-tag {
+            background: #e9d8c2;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #8b623b;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #2b2a1e;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        h1 a {
+            color: #b87a3a;
+            text-decoration: none;
+        }
+        h1 a:hover {
+            text-decoration: underline;
+        }
+        .lead {
+            font-size: 1rem;
+            color: #5c523b;
+            margin-bottom: 32px;
+            border-left: 3px solid #dfbc8c;
+            padding-left: 18px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .author-section {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .avatar-box {
+            flex-shrink: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .avatar-circle {
+            background: #ede0cf;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border: 2px solid #fff0e2;
+        }
+        .avatar-caption {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #a07d50;
+            margin-top: 0px;
+        }
+        .bio-text {
+            flex: 1;
+        }
+        .bio-text p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3c3726;
+            font-size: 0.95rem;
+        }
+
+        .full-article {
+            margin-top: 8px;
+        }
+        .full-article h2 {
+            font-size: 1.55rem;
+            margin: 28px 0 14px 0;
+            color: #2f2b1c;
+            font-weight: 600;
+            border-left: 4px solid #c1925c;
+            padding-left: 16px;
+        }
+        .full-article h3 {
+            font-size: 1.25rem;
+            margin: 22px 0 12px 0;
+            color: #9b6a3a;
+            font-weight: 600;
+        }
+        .full-article p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3f3a28;
+            font-size: 0.96rem;
+        }
+        .full-article ul, .full-article ol {
+            margin: 12px 0 20px 30px;
+            color: #3f3a28;
+        }
+        .full-article li {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        .full-article a {
+            color: #b87a3a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #eedbbd;
+        }
+        .full-article a:hover {
+            border-bottom-color: #b87a3a;
+        }
+
+        /* блок с коньяками — только одна ссылка */
+        .expert-cognacs {
+            background: #f6ede1;
+            border-radius: 28px;
+            padding: 22px 28px;
+            margin: 32px 0 28px;
+            border: 1px solid #ebd8be;
+        }
+        .expert-cognacs p {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: #b47a41;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .cognac-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .cognac-links a {
+            background: #ffffffdb;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5a3f22;
+            text-decoration: none;
+            border: 1px solid #e2cdad;
+            transition: all 0.2s;
+        }
+        .cognac-links a:hover {
+            background: #fff3e6;
+            border-color: #c19560;
+            color: #7b4f24;
+            transform: translateY(-1px);
+        }
+
+        /* сноска с одной ссылкой */
+        .footer-note {
+            margin: 24px 0 32px 0;
+            padding: 16px 20px;
+            background: #fef7ef;
+            border-radius: 32px;
+            border: 1px solid #eedfc0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: #ab8a5e;
+        }
+        .footer-note span {
+            font-weight: 400;
+        }
+        .footer-note a {
+            color: #946e41;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-note a:hover {
+            border-bottom-color: #b47a41;
+            text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            .article-inner {
+                padding: 28px 22px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .avatar-circle {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="article-banner">
+    <div class="article-inner">
+        <div class="brand-head">
+            <div class="brand-logo">
+                <span class="brand-icon">🍇🥃</span>
+                <div class="brand-name"><span>Коньячный гид</span></div>
+            </div>
+            <div class="expert-tag">дагестанский коньяк</div>
+        </div>
+
+        <h1>Солнце, дуб и выдержка: как Дагестан создал главный коньячный бренд России</h1>
+        <div class="lead">Виноделие в Дагестане уходит корнями в глубокую древность: тёплое солнце, близость Каспия и защита Кавказских гор веками делали этот край идеальным для винограда.</div>
+
+        <div class="author-section">
+            <div class="avatar-box">
+                <div class="avatar-circle">🏔️🍷</div>
+                <div class="avatar-caption">коньячная культура</div>
+            </div>
+            <div class="bio-text">
+                <p>История промышленного коньяка началась здесь в XIX веке, когда в Кизляре и Дербенте заложили первые заводы, и с тех пор регион не сдаёт позиций. Сегодня словосочетание «дагестанский коньяк» звучит почти как знак качества: за ним стоят вековые традиции, кавказский дуб для бочек и спирты, которые регулярно отмечают на международных конкурсах. Для многих ценителей именно дагестанский напиток стал точкой отсчёта в российском коньяке и эталоном, с которым оценивают остальных. Корни этой репутации — в дореволюционном виноделии: ещё в конце XIX века кизлярские и дербентские спирты ценили по всей Российской империи. Революция и войны не раз прерывали производство, но школа сохранилась и к середине XX века возродилась с новой силой. Так сложилось, что для российского покупателя это давно привычный ориентир по соотношению цены и зрелости напитка.</p>
+            </div>
+        </div>
+
+        <div class="full-article">
+            <h2>Главные центры производства: Кизляр и Дербент</h2>
+            <p>Два города задают тон всему дагестанскому коньяку. Кизлярский коньячный завод ведёт историю с 1885 года, когда винодел Давид Сараджев привёз первую партию в Москву; сегодня это признанный флагман отрасли. Дербентский коньячный комбинат ещё старше — он основан в 1861 году и опирается на собственные виноградники у самого южного города России. Оба предприятия выдерживают спирты в бочках из горного кавказского дуба, и именно эта древесина во многом формирует узнаваемый характер напитка. После национализации Кизлярский завод сегодня находится в федеральной собственности, что нередко считают дополнительной гарантией подлинности. Дербентский комбинат развивает винный туризм — с экскурсиями, дегустациями и собственным музеем. Вместе оба предприятия закрывают заметную долю всего российского коньячного рынка.</p>
+            <ul>
+                <li>Новокубанский коньячный дом (с 1943 года) — достойная альтернатива с кубанских берегов дагестанским производителям коньяка;</li>
+                <li>Кизляр (с 1885 года) — флагман отрасли, родина марок «Лезгинка» и «Дагестан»;</li>
+                <li>Дербент (с 1861 года) — одно из старейших производств страны, более 2000 га лоз. Общая черта — выдержка в кавказском дубе и южный, очень солнечный виноград.</li>
+            </ul>
+
+            <h2>Сравнение флагманских дагестанских коньяков</h2>
+            <p>Прямое сопоставление флагманов помогает понять, чем различаются школы двух заводов. Кизлярская «Лезгинка» — мягкий выдержанный коньяк с фруктово-ванильным профилем; статусный «Дагестан» класса КС (13 лет) даже занял третье место в списке самых ожидаемых напитков Европы по версии французского журнала La Revue du vin de France. У Дербента свой почерк: марка «Каспий» и линейка КВВК делают ставку на плотность и пряность. При всей разнице обе школы объединяет долгая выдержка и узнаваемая кавказская манера. Различия видны и в цене: «Лезгинка» доступна почти в любом магазине, тогда как старые КС-купажи относятся к подарочному сегменту. Но даже базовые позиции дагестанских заводов держат высокий уровень, что и объясняет их популярность, а выбор между плотным дербентским и более округлым кизлярским стилем — скорее вопрос личного вкуса. Любителю классики обычно ближе мягкость, а тем, кто ищет насыщенность, — пряность и плотное тело.</p>
+            <ul>
+                <li>«Лезгинка» (КВ) — мягкость, баланс и классика кизлярского стиля;</li>
+                <li>«Дагестан» (КС, 13 лет) — глубина, награды и премиальный характер;</li>
+                <li>«Каспий» (КВВК, 8 лет) от Дербента — пряность и плотное тело.</li>
+            </ul>
+
+            <h2>Особенности вкуса дагестанского коньяка</h2>
+            <p>Вкус дагестанского коньяка узнают по сочетанию южной зрелости винограда и характера кавказского дуба. В нём обычно больше тёплых, смолистых и пряных тонов, чем во французских аналогах, а сладость ощущается мягче и сдержаннее. Долгая выдержка в плотной древесине даёт насыщенный янтарный цвет и долгое послевкусие. Кавказский дуб плотнее лимузенского и отдаёт напитку больше смолистых и пряных нот, а жаркое лето и обилие солнца поднимают зрелость винограда, поэтому даже молодые спирты получаются яркими. Подавать такой коньяк лучше при комнатной температуре, чтобы тёплые тона раскрылись полностью. Именно эта узнаваемость и сделала местные напитки популярными далеко за пределами республики, а их историю — поводом для гордости региона.</p>
+            <ul>
+                <li>аромат — тёплый, с нотами сухофруктов, ванили и лёгкой смолы;</li>
+                <li>вкус — насыщенный, чуть пряный, с мягкой, не приторной сладостью;</li>
+                <li>послевкусие — длинное и тёплое, с характерной древесной горчинкой, которая держится минуту и дольше.</li>
+            </ul>
+
+            <h2>Есть ли альтернативы дагестанским коньякам?</h2>
+            <p>Дагестан — не единственная сильная школа в России. Достойную альтернативу предлагает Кубань: здесь мягче климат и иная почва, а значит, и другой характер коньяка — более лёгкий и фруктовый, чем у южных соседей. Хороший пример — коньячный дом «Новокубанское», чья история на левом берегу Кубани восходит к виноградникам барона Штейнгеля, которые заложил их в 1943 году, а линейка охватывает выдержки от трёх до сорока лет, включая зрелые купажи класса КС. Собственные виноградники в сочетании с традиционной французской технологией выдержки — качество, проверенное временем.</p>
+            <p>Ставрополье и Крым тоже предлагают любопытные образцы, но именно кубанская школа ближе всего к дагестанской по уровню и истории. Это не повод противопоставлять регионы, а возможность шире посмотреть на отечественный коньяк и собрать собственную картину вкусов. Сравнить кубанский стиль с дагестанским и подобрать напиток для себя и в подарок на Новокубанское, где у каждой марки указаны возраст спиртов, состав и происхождение винограда.</p>
+
+            <!-- Плашка с коньяками — только одна ссылка -->
+            <div class="expert-cognacs">
+                <p>🍇 КОНЬЯКИ, ДОСТОЙНЫЕ ВНИМАНИЯ</p>
+                <div class="cognac-links">
+                    <a href="https://novokubanskoe.ru/" target="_blank" rel="noopener noreferrer">Новокубанское — коньяки с историей</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Единая сноска с одной ссылкой -->
+        <div class="footer-note">
+            <span>✧ Отечественный коньяк — проверенное качество и вековые традиции</span>
+            <a href="https://novokubanskoe.ru/" target="_blank" rel="noopener noreferrer">Перейти к каталогу →</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
